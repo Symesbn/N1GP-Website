@@ -1,0 +1,252 @@
+#content {
+    margin-top: 30px;
+	margin-bottom: 30px;
+
+	width:100%;
+}
+body {
+	max-width:3200px;
+	min-width:1400px;
+	padding: 30px;
+    font-family: calibri, arial, tahoma, verdana, sans-serif;
+    background-color: #FDFAF0;
+    color: #000;
+}
+#sites {
+    border-top: solid;
+    border-bottom: solid;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #EF5350;
+    color: #000;
+}
+.pad
+{
+	padding-bottom:15px;
+
+}
+#sites ul {
+    margin: 0;
+    padding: 0;
+}
+#sites ul li {
+    float: left;
+    text-align: left;
+    list-style-type: none;
+    display: inline;
+}
+#sites li a {
+	background-color:#EF5350;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+#sites li a:hover {
+    background-color: #ccc;
+    color: #000;
+    font-size: 100%;
+}
+.sitesbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+	border-right:solid;
+	text-decoration: none;
+}
+
+li a:hover, .sitesdown:hover .sitesbtn {
+    background-color: red;
+}
+.sites-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sites-content a {
+	border-top:none;
+    text-align: left;
+}
+.sites-content a:first-child{
+	border-top:solid;
+}
+.sitesdown:hover .sites-content {
+		border:solid;
+
+    display: block;
+}
+#container {
+    background-color: #FDFAF0;
+	color: #000;
+    border: solid;
+    box-shadow: 5px 1px 50px #A3A370;
+}
+#header {
+    background-color: #EF5350;
+    color: #000;
+	height:130px;
+}
+#header h1 {
+    font-family: Brush Script MT, cursive;
+	padding-top:50px;
+    width: 100%; /** Use 100% to fill the width of the page **/
+    margin: 0 auto;   
+	font-size: 50px;
+    text-align: center;
+}
+#header img{
+	position:absolute;
+}
+.rightborder {
+    border-right: solid;
+    border-left: none;
+}
+.leftborder {
+    border-right: none;
+    border-left: solid;
+    float: right;
+}
+#footer {
+    clear: both;
+    text-align: right;
+    padding: 20px;
+    height: 1%;
+	padding-top:20px;
+}
+#footer img {
+    vertical-align: middle;
+}
+.searchbox {
+    font-size: 25px;
+    width: 700px;
+    height: 30px;
+    background-color: #000;
+}
+.submitbtn {
+    background-color: #EF5350;
+    box-shadow: 2px 2px #666;
+	float:right;
+    border: 1px solid;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    outline: none;
+}
+.submitbtn#left {
+    background-color: #EF5350;
+    box-shadow: 2px 2px #666;
+	float:left;
+    border: 1px solid;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    outline: none;
+}
+.submitbtn:active {
+    box-shadow: 2px 2px #666; 
+    outline: none;
+    transform: translateY(3px);
+}
+.right {
+    float: right;
+    text-align: right;
+}
+.left {
+    float: left;
+    text-align: left;
+}
+p.index {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+   text-align:center;
+}
+.mainformtable {
+    margin-left: auto;
+    margin-right: auto;
+	border-width: 1px;
+    box-shadow: 1px 1px 25px #858585;
+    padding: 2px;	
+	padding-bottom:15px;
+
+}
+.registertable {
+    margin-left: auto;
+    margin-right: auto;
+	border-width: 1px;
+    box-shadow: 1px 1px 25px #858585;
+	padding-bottom:15px;
+	width:45%;
+	padding:5px;
+
+}
+.searchboxtable {
+	width:100%;
+	margin-left: auto;
+    margin-right: auto;
+
+}
+.searchboxtable  td, th {
+	padding-left:20px;
+	padding-right:20px;
+}
+.resulttable
+{
+	width:65%; 
+	margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+	border-width: 1px;
+    box-shadow: 1px 1px 25px #858585;
+    padding: 5px;	
+}
+
+p {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 100%;
+    line-height: 25px;
+    margin-top: 2px;
+    text-align: left;
+}
+#form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+#createform {
+    width: 35%;
+	margin-left: auto;
+    margin-right: auto;
+	border-width: 1px;
+    box-shadow: 1px 1px 25px #858585;
+    padding: 5px;
+	padding-bottom:15px;
+}
+.longtextbox {
+    width: 100%;
+}
+.longtextboxregister {
+    width: 90%;
+}
+.bigtextbox {
+    width: 100%;
+    height: 100px;
+	resize: none;
+}
+.formheader {
+    background-color: #EF5350;
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+    text-align: center;
+    font-size: 35px;
+	
+}
+.dropdownspace {
+    padding-bottom: 10px;
+}

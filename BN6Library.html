@@ -4,15 +4,26 @@
 
 		<script type="text/javascript" src="STDChips.js"></script>
 		<script type="text/javascript" src="MegaChips.js"></script>
+		<script type="text/javascript" src="GigaChips.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"></script>
+		
+		<script> 
+		$(function(){
+		  $("#header").load("Header.html"); 
+		  $("#footer").load("Footer.html");
+		});
+		</script> 
+		
 
 	</head>
 
 	<body>
+	
+		<div id="header"></div>
 
-		<table id="STDTable">
+		<table id="STDTable" class="cell-border" style="width:100%">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -29,7 +40,24 @@
 			</tbody>
 		</table>
 		
-		<table id="MegaTable">
+		<table id="MegaTable" class="cell-border" style="width:100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Element</th>
+					<th>MB</th>
+					<th>ATK</th>
+					<th>Codes</th>
+					<th>Description</th>
+					<th>Image</th>
+					<th>MoreDetails</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		
+		<table id="GigaTable" class="cell-border" style="width:100%">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -61,16 +89,31 @@
 			}
 			$('#STDTable').DataTable();
 			
+			$('#STDTable tbody').on('click', 'tr', function () {
+				var data = table.row( this ).MoreDetails();
+				alert( 'You clicked on '+MoreDetails[0]+'\'s row' );
+			} );
+			
 			for (i=0; i<MegaChips.length; i++){
 				var image = "<img src=" + MegaChips[i].Image + "/>";
 				$("#MegaTable").append("<tr><td>" + MegaChips[i].Name + "</td><td>" + MegaChips[i].Element + "</td><td>" + MegaChips[i].MB + "</td><td>" +
 					MegaChips[i].ATK + "</td><td>" + MegaChips[i].Codes + "</td><td>" + MegaChips[i].Description + "</td><td>" + 
 						image + "</td><td>" + MegaChips[i].MoreDetails + "</td></tr>");
 			}
-			$('#MegaTable').DataTable();			
+			$('#MegaTable').DataTable();
+
+			for (i=0; i<GigaChips.length; i++){
+				var image = "<img src=" + GigaChips[i].Image + "/>";
+				$("#GigaTable").append("<tr><td>" + GigaChips[i].Name + "</td><td>" + GigaChips[i].Element + "</td><td>" + GigaChips[i].MB + "</td><td>" +
+					GigaChips[i].ATK + "</td><td>" + GigaChips[i].Codes + "</td><td>" + GigaChips[i].Description + "</td><td>" + 
+						image + "</td><td>" + GigaChips[i].MoreDetails + "</td></tr>");
+			}
+			$('#GigaTable').DataTable();
 			
 		})
 	
 	</script>
+	
+	<div id="footer"></div>
 
 </html>
